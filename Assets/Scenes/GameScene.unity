@@ -1246,11 +1246,12 @@ MonoBehaviour:
   _data:
     _json: '{"declarations":{"collection":{"$content":[{"name":"ListOfPipePrefabs","value":{"$content":[0,1,2],"$type":"System.Collections.Generic.List`1[[UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"$version":"A"},{"name":"frequencyOfSpawn","value":{"$content":5.0,"$type":"System.Single"},"$version":"A"},{"name":"ListOfInstances","value":{"$content":[],"$type":"System.Collections.Generic.List`1[[UnityEngine.GameObject,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"$version":"A"},{"name":"AllowSpawn","value":{"$content":false,"$type":"System.Boolean"},"$version":"A"},{"name":"GameManager","value":{"$content":3,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 198738879585946605, guid: aa59f6e3e70646d42ba871651b4b2066, type: 3}
     - {fileID: 716592007095401659, guid: a3d72e67c74ac6d42bbfee3adeb48c49, type: 3}
     - {fileID: 7067643289980219166, guid: 39e8e0b23df0aa144b1fc1c8f949f4a8, type: 3}
+    - {fileID: 837227010}
 --- !u!1 &287419904
 GameObject:
   m_ObjectHideFlags: 0
@@ -2381,6 +2382,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 837227013}
+  - component: {fileID: 837227012}
+  - component: {fileID: 837227011}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2388,6 +2391,38 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &837227011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837227010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efe58df89b5b74a97a123b5ed2b70422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
+    _objectReferences:
+    - {fileID: 11400000, guid: d52d89ddccab35e46b1982a1d18fe6d9, type: 2}
+--- !u!114 &837227012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837227010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"declarations":{"collection":{"$content":[{"name":"Player","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _objectReferences:
+    - {fileID: 1331761047}
 --- !u!4 &837227013
 Transform:
   m_ObjectHideFlags: 0
@@ -5562,6 +5597,7 @@ GameObject:
   - component: {fileID: 2068597603}
   - component: {fileID: 2068597602}
   - component: {fileID: 2068597605}
+  - component: {fileID: 2068597606}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -5598,8 +5634,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"collection":{"$content":[{"name":"speed","value":{"$content":-0.5,"$type":"System.Single"},"$version":"A"},{"name":"wrapLimit","value":{"$content":-15.89,"$type":"System.Single"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
-    _objectReferences: []
+    _json: '{"declarations":{"collection":{"$content":[{"name":"speed","value":{"$content":-0.5,"$type":"System.Single"},"$version":"A"},{"name":"wrapLimit","value":{"$content":-15.89,"$type":"System.Single"},"$version":"A"},{"name":"GameManager","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _objectReferences:
+    - {fileID: 837227010}
 --- !u!4 &2068597604
 Transform:
   m_ObjectHideFlags: 0
@@ -5634,6 +5671,22 @@ MonoBehaviour:
     _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
     _objectReferences:
     - {fileID: 11400000, guid: 47dab4134555c164b964e6fe572897ba, type: 2}
+--- !u!114 &2068597606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068597601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2fe5546f775c47d2820aa5e8a715f53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
+    _objectReferences:
+    - {fileID: 11400000, guid: b24148c25f2152e469ac260624a9c4f9, type: 2}
 --- !u!1 &2069067504
 GameObject:
   m_ObjectHideFlags: 0
@@ -5646,6 +5699,7 @@ GameObject:
   - component: {fileID: 2069067508}
   - component: {fileID: 2069067507}
   - component: {fileID: 2069067506}
+  - component: {fileID: 2069067509}
   m_Layer: 6
   m_Name: Tiles
   m_TagString: Untagged
@@ -5751,8 +5805,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"collection":{"$content":[{"name":"speed","value":{"$content":-5.0,"$type":"System.Single"},"$version":"A"},{"name":"wrapLimit","value":{"$content":-4.0,"$type":"System.Single"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
-    _objectReferences: []
+    _json: '{"declarations":{"collection":{"$content":[{"name":"speed","value":{"$content":-5.0,"$type":"System.Single"},"$version":"A"},{"name":"wrapLimit","value":{"$content":-4.0,"$type":"System.Single"},"$version":"A"},{"name":"GameManager","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _objectReferences:
+    - {fileID: 837227010}
+--- !u!114 &2069067509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069067504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2fe5546f775c47d2820aa5e8a715f53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
+    _objectReferences:
+    - {fileID: 11400000, guid: b24148c25f2152e469ac260624a9c4f9, type: 2}
 --- !u!1 &2075114766
 GameObject:
   m_ObjectHideFlags: 0
